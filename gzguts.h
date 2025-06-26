@@ -66,6 +66,7 @@
 #endif
 
 #if defined(__CYGWIN__)
+#include <unistd.h>
 #  ifndef HAVE_VSNPRINTF
 #    define HAVE_VSNPRINTF
 #  endif
