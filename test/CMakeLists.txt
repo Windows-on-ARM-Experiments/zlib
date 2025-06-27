@@ -94,8 +94,6 @@ if(ZLIB_BUILD_STATIC)
 
         add_executable(infcover infcover.c)
         target_link_libraries(infcover ZLIB::ZLIBSTATIC)
-        target_compile_options(infcover PRIVATE -coverage)
-        target_link_options(infcover PRIVATE -coverage)
         target_compile_definitions(
             infcover PRIVATE $<$<BOOL:${HAVE___ATTR__VIS_HIDDEN}>:HAVE_HIDDEN>)
         add_test(NAME zlib-coverage COMMAND infcover)
